@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéTech - Pokédex</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagens/pokeball.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scroolbar.css">
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="imagens/pokeball.png" alt="Poke Ball" class="logo"></a>
+        <input id="ipt_pesquisar_pokemon" placeholder="Pesquisar Pokémon" class="pesquisar" oninput="pesquisa()">
+        <button id="botao_alterar_tema"><img src="imagens/sun.png" alt="Sol" class="imagem_botao"></button>
+    </header>
+
+    <main>
+        <ul class="listagem_pokemon">
+            <li class="cartao_pokemon" id="bulbasaur">
+                <div class="informacoes">
+                    <span>Bulbasaur</span>
+                    <span>#0001</span>
+                </div>
+
+                <img src="imagens/bulbasaur.gif" alt="Bulbasaur" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo grama">Grama</li>
+                    <li class="tipo veneno">Veneno</li>
+                </ul>
+
+                <p class="descricao">Há uma semente de planta em suas costas desde o dia em que este Pokémon nasceu. A
+                    semente cresce lentamente.</p>
+            </li>
+
+
+            <li class="cartao_pokemon" id="ivysaur">
+                <div class="informacoes">
+                    <span>Ivysaur</span>
+                    <span>#0002</span>
+                </div>
+
+                <img src="imagens/ivysaur.gif" alt="Ivysaur" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo grama">Grama</li>
+                    <li class="tipo veneno">Veneno</li>
+                </ul>
+
+                <p class="descricao">Quando o bulbo nas costas cresce, parece perder a capacidade de ficar de pé nas
+                    patas traseiras.</p>
+            </li>
+
+
+            <li class="cartao_pokemon" id="venosaur">
+                <div class="informacoes">
+                    <span>Venosaur</span>
+                    <span>#0003</span>
+                </div>
+
+                <img src="imagens/venusaur.gif" alt="Venosaur" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo grama">Grama</li>
+                    <li class="tipo veneno">Veneno</li>
+                </ul>
+
+                <p class="descricao">Sua planta floresce quando está absorvendo energia solar. Ele permanece em
+                    movimento para buscar a luz do sol.</p>
+            </li>
+
+
+            <li class="cartao_pokemon" id="charmander">
+                <div class="informacoes">
+                    <span>Charmander</span>
+                    <span>#0004</span>
+                </div>
+
+                <img src="imagens/charmander.gif" alt="Charmander" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo fogo">Fogo</li>
+                </ul>
+
+                <p class="descricao">Tem preferência por coisas quentes. Quando chove, diz-se que o vapor jorra da ponta
+                    de sua cauda.</p>
+            </li>
+
+
+            <li class="cartao_pokemon" id="charmeleon">
+                <div class="informacoes">
+                    <span>Charmeleon</span>
+                    <span>#0005</span>
+                </div>
+
+                <img src="imagens/charmeleon.gif" alt="Charmeleon" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo fogo">Fogo</li>
+                </ul>
+
+                <p class="descricao">Tem uma natureza bárbara. Em batalha, ele chicoteia sua cauda de fogo e corta com
+                    garras afiadas.</p>
+            </li>
+
+
+            <li class="cartao_pokemon" id="charizard">
+                <div class="informacoes">
+                    <span>Charizard</span>
+                    <span>#0006</span>
+                </div>
+
+                <img src="imagens/charizard.gif" alt="Charizard" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo fogo">Fogo</li>
+                    <li class="tipo voador">Voador</li>
+                </ul>
+
+                <p class="descricao">Ele cospe fogo que é quente o suficiente para derreter pedras. Pode causar
+                    incêndios florestais soprando chamas.</p>
+            </li>
+
+
+            <li class="cartao_pokemon" id="squirtle">
+                <div class="informacoes">
+                    <span>Squirtle</span>
+                    <span>#0007</span>
+                </div>
+
+                <img src="imagens/squirtle.gif" alt="Squirtle" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+
+                <p class="descricao">Quando retrai seu longo pescoço em sua concha, esguicha água com força vigorosa.
+                </p>
+            </li>
+
+
+            <li class="cartao_pokemon" id="wartortle">
+                <div class="informacoes">
+                    <span>Wartortle</span>
+                    <span>#0008</span>
+                </div>
+
+                <img src="imagens/wartortle.gif" alt="Wartortle" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+
+                <p class="descricao">
+                    É reconhecido como um símbolo de longevidade. Se sua casca tiver algas, aquele Wartortle é muito
+                    velho.</p>
+            </li>
+
+
+            <li class="cartao_pokemon" id="blastoise">
+                <div class="informacoes">
+                    <span>Blastoise</span>
+                    <span>#0009</span>
+                </div>
+
+                <img src="imagens/blastoise.gif" alt="Blastoise" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+
+                <p class="descricao">
+                    Ele esmaga seu inimigo sob seu corpo pesado para causar desmaios. Em uma pitada, ele se retirará
+                    dentro de sua casca</p>
+            </li>
+
+            <li class="cartao_pokemon" id="pikachu">
+                <div class="informacoes">
+                    <span>Pikachu</span>
+                    <span>#0025</span>
+                </div>
+
+                <img src="imagens/pikachu.gif" alt="Pikachu" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo eletrico">Elétrico</li>
+                </ul>
+
+                <p class="descricao">
+                    Quando está com raiva, descarrega imediatamente a energia armazenada nas bolsas de suas bochechas.
+                </p>
+            </li>
+
+            <li class="cartao_pokemon" id="eevee">
+                <div class="informacoes">
+                    <span>Eevee</span>
+                    <span>#0133</span>
+                </div>
+
+                <img src="imagens/eevee.gif" alt="Eevee" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo normal">Normal</li>
+                </ul>
+
+                <p class="descricao">
+                    A sua capacidade de evoluir em muitas formas permite-lhe adaptar-se suave e perfeitamente a qualquer
+                    ambiente.</p>
+            </li>
+
+            <li class="cartao_pokemon" id="chikorita">
+                <div class="informacoes">
+                    <span>Chikorita</span>
+                    <span>#0152</span>
+                </div>
+
+                <img src="imagens/chikorita.gif" alt="Chikorita" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo grama">Grama</li>
+                </ul>
+
+                <p class="descricao">
+                    Na batalha, Chikorita agita sua folha para manter o inimigo afastado. No entanto, uma doce
+                    fragrância também exala da folha, acalmando o Pokémon batalhador e criando uma atmosfera acolhedora
+                    e amigável ao redor.</p>
+            </li>
+
+            <li class="cartao_pokemon" id="bayleef">
+                <div class="informacoes">
+                    <span>Bayleef</span>
+                    <span>#0153</span>
+                </div>
+
+                <img src="imagens/beyleeef.gif" alt="Bayleef" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo grama">Grama</li>
+                </ul>
+
+                <p class="descricao">
+                    O pescoço de Bayleef é cercado por folhas enroladas. Dentro de cada folha tubular há um pequeno
+                    broto de uma árvore. A fragrância desta sessão deixa as pessoas animadas.</p>
+            </li>
+
+            <li class="cartao_pokemon" id="meganium">
+                <div class="informacoes">
+                    <span>Meganium</span>
+                    <span>#0154</span>
+                </div>
+
+                <img src="imagens/meganium.gif" alt="Meganium" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo grama">Grama</li>
+                </ul>
+
+                <p class="descricao">
+                    A fragrância da flor de Meganium acalma e acalma as emoções. Na batalha, este Pokémon exala mais de
+                    seu cheiro calmante para atenuar o espírito de luta do inimigo.
+                </p>
+            </li>
+
+            <li class="cartao_pokemon" id="cyndaquil">
+                <div class="informacoes">
+                    <span>Cyndaquil</span>
+                    <span>#0155</span>
+                </div>
+
+                <img src="imagens/cyndaquil.gif" alt="Cyndaquil" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo fogo">Fogo</li>
+                </ul>
+
+                <p class="descricao">
+                    Cyndaquil se protege acendendo as chamas em suas costas. As chamas são vigorosas se o Pokémon
+                    estiver com raiva. No entanto, se estiver cansado, as chamas crepitam intermitentemente com
+                    combustão incompleta.
+                </p>
+            </li>
+
+            <li class="cartao_pokemon" id="quilava">
+                <div class="informacoes">
+                    <span>Quilava</span>
+                    <span>#0156</span>
+                </div>
+
+                <img src="imagens/quilava.gif" alt="Quilava" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo fogo">Fogo</li>
+                </ul>
+
+                <p class="descricao">
+                    Quilava mantém seus inimigos afastados com a intensidade de suas chamas e rajadas de ar
+                    superaquecido. Este Pokémon aplica sua excelente agilidade para desviar de ataques, mesmo enquanto
+                    queima o inimigo com chamas.
+                </p>
+            </li>
+
+            <li class="cartao_pokemon" id="typhlosion">
+                <div class="informacoes">
+                    <span>Typhlosion</span>
+                    <span>#0157</span>
+                </div>
+
+                <img src="imagens/typhlosion.gif" alt="Quilava" class="gif">
+
+                <ul class="tipos">
+                    <li class="tipo fogo">Fogo</li>
+                </ul>
+
+                <p class="descricao">
+                    Typhlosion se esconde atrás de uma névoa de calor brilhante que cria usando suas chamas intensamente
+                    quentes. Este Pokémon cria explosões explosivas que queimam tudo em cinzas.
+                </p>
+            </li>
+
+
+
+        </ul>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
+
+<script>
+    function pesquisa() {
+        var vt_pokemon = ["bulbasaur", "ivysaur", "venosaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise", "pikachu", "eevee", "chikorita", "bayleef", "meganium", "cyndaquil", "quilava", "typhlosion"]
+
+        if (ipt_pesquisar_pokemon.value == "") {
+            bulbasaur.style.border = "none"
+            ivysaur.style.border = "none"
+            venosaur.style.border = "none"
+            charmander.style.border = "none"
+            charmeleon.style.border = "none"
+            charizard.style.border = "none"
+            squirtle.style.border = "none"
+            wartortle.style.border = "none"
+            blastoise.style.border = "none"
+            pikachu.style.border = "none"
+            eevee.style.border = "none"
+            chikorita.style.border = "none"
+            bayleef.style.border = "none"
+            meganium.style.border = "none"
+            cyndaquil.style.border = "none"
+            quilava.style.border = "none"
+            typhlosion.style.border = "none"
+            bulbasaur.style.transform = "scale(1.00)"
+            ivysaur.style.transform = "scale(1.00)"
+            venosaur.style.transform = "scale(1.00)"
+            charmander.style.transform = "scale(1.00)"
+            charmeleon.style.transform = "scale(1.00)"
+            charizard.style.transform = "scale(1.00)"
+            squirtle.style.transform = "scale(1.00)"
+            wartortle.style.transform = "scale(1.00)"
+            blastoise.style.transform = "scale(1.00)"
+            pikachu.style.transform = "scale(1.00)"
+            eevee.style.transform = "scale(1.00)"
+            chikorita.style.transform = "scale(1.00)"
+            bayleef.style.transform = "scale(1.00)"
+            meganium.style.transform = "scale(1.00)"
+            cyndaquil.style.transform = "scale(1.00)"
+            quilava.style.transform = "scale(1.00)"
+            typhlosion.style.transform = "scale(1.00)"
+
+        }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[0]) {
+        bulbasaur.style.border = "solid cyan 5px"
+        bulbasaur.style.transform = "scale(1.05)"
+    }
+    
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[1]) {
+        ivysaur.style.border = "solid cyan 5px"
+        ivysaur.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[2]) {
+        venosaur.style.border = "solid cyan 5px"
+        venosaur.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[3]) {
+        charmander.style.border = "solid cyan 5px"
+        charmander.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[4]) {
+        charmeleon.style.border = "solid cyan 5px"
+        charmeleon.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[5]) {
+        charizard.style.border = "solid cyan 5px"
+        charizard.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[6]) {
+        squirtle.style.border = "solid cyan 5px"
+        squirtle.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[7]) {
+        wartortle.style.border = "solid cyan 5px"
+        wartortle.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[8]) {
+        blastoise.style.border = "solid cyan 5px"
+        blastoise.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[9]) {
+        pikachu.style.border = "solid cyan 5px"
+        pikachu.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[10]) {
+        eevee.style.border = "solid cyan 5px"
+        eevee.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[11]) {
+        chikorita.style.border = "solid cyan 5px"
+        chikorita.style.transform = "scale(1.05)"
+
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[12]) {
+        bayleef.style.border = "solid cyan 5px"
+        bayleef.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[13]) {
+        meganium.style.border = "solid cyan 5px"
+        meganium.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[14]) {
+        cyndaquil.style.border = "solid cyan 5px"
+        cyndaquil.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[15]) {
+        quilava.style.border = "solid cyan 5px"
+        quilava.style.transform = "scale(1.05)"
+    }
+
+    if (ipt_pesquisar_pokemon.value == vt_pokemon[16]) {
+        typhlosion.style.border = "solid cyan 5px"
+        typhlosion.style.transform = "scale(1.05)"
+    }
+    }
+</script>
